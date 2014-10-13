@@ -7,7 +7,7 @@
 // @updateURL   https://github.com/Vismmax/yunpan.360.cn/raw/master/yunpan.360.cn.ru.meta.js
 // @downloadURL https://github.com/Vismmax/yunpan.360.cn/raw/master/yunpan.360.cn.ru.user.js
 // @include     *yunpan.360.cn/*
-// @version     0.3
+// @version     0.4
 // @grant       none
 // ==/UserScript==
 
@@ -50,7 +50,7 @@ var dict = {
     'login_submit'         : 'Войти',   // 登录
     'login_submit_go'      : 'Вход',   // 登录中
     'login_reg'            : 'Регистрация',   // 注册360账号
-    'login_goMy'           : 'Войти в облоко',   // 进入我的云盘
+    'login_goMy'           : 'Войти в облако',   // 进入我的云盘
     'login_info_p'         : 'Вы вошли как:',   // 您当前正在使用的云盘帐号是：
     'login_logout'         : 'Выход>>',   // 更换帐号&gt;&gt;
     'login_dl_pc'          : 'PC с синхронизацией',   // PC同步版下载
@@ -78,8 +78,10 @@ var dict = {
     'topPanel_logo'         : 'Домашняя страница',   // 云盘首页
     'topPanel_file'         : 'Файлы', // 网盘
     'topPanel_file_title'   : 'Наиболее безопасный сетевой диск', // 最安全的网络U盘
-    'topPanel_xiangce'      : 'Фотоальбом', // 相册
-    'topPanel_xiangce_title': 'Фотоальбом', // 相册
+    'topPanel_photo'        : 'Мой фотоальбом', // 我的照片
+    'topPanel_photo_title'  : 'Мои картинки',
+    'topPanel_share'        : 'Общий фотоальбом', // 共享相册
+    'topPanel_share_title'  : 'Картинки, доступные другим пользователям',
     'topPanel_collect'      : 'Коллекция', // 云收藏
     'topPanel_collect_title': 'Сохраненные данные из браузера', // 从浏览器保存的内容
     'topPanel_more'         : 'Больше', // 更多
@@ -101,6 +103,8 @@ var dict = {
     'leftPanel_video'    : 'Видео', // 视频
     'leftPanel_music'    : 'Музыка', // 音乐
     'leftPanel_text'     : 'Документы', // 文档
+    'leftPanel_img'      : 'Фото', // 图片
+    'leftPanel_se'       : 'Онлайн', // 来自浏览器
     'leftPanel_sFile'    : 'Сейф', // 保险箱
     'leftPanel_link'     : 'Расшаренные', // 我的分享
     'leftPanel_group'    : 'Группы', // 我的共享群
@@ -591,8 +595,10 @@ function translate_topPanel() {
     rename('#logo', 'title', dict.topPanel_logo);
     rename('#topPanel .pan', 'text', dict.topPanel_file);
     rename('#topPanel .pan', 'title', dict.topPanel_file_title);
-    rename('#topPanel .xiangce', 'text', dict.topPanel_xiangce);
-    rename('#topPanel .xiangce', 'title', dict.topPanel_xiangce_title);
+    rename('#topPanel .my-photo', 'text', dict.topPanel_photo);
+    rename('#topPanel .my-photo', 'title', dict.topPanel_photo_title);
+    rename('#topPanel .share-photo', 'text', dict.topPanel_share);
+    rename('#topPanel .share-photo', 'title', dict.topPanel_share_title);   
     rename('#topPanel .collect', 'text', dict.topPanel_collect);
     rename('#topPanel .collect', 'title', dict.topPanel_collect_title);
     rename('#topPanel .more', 'text', dict.topPanel_more);
@@ -628,6 +634,8 @@ function translate_leftPanel() {
     rename('#leftPanel .tab-video .text', 'text', dict.leftPanel_video);
     rename('#leftPanel .tab-music .text', 'text', dict.leftPanel_music);
     rename('#leftPanel .tab-text .text', 'text', dict.leftPanel_text);
+    rename('#leftPanel .tab-img .text', 'text', dict.leftPanel_img);
+    rename('#leftPanel .tab-se .text', 'text', dict.leftPanel_se);
     rename('#leftPanel .tab-sFile .text', 'text', dict.leftPanel_sFile);
     rename('#leftPanel .tab-link .text', 'text', dict.leftPanel_link);
     rename('#leftPanel .tab-group .text', 'text', dict.leftPanel_group);
